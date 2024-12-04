@@ -1,0 +1,16 @@
+﻿<!-- admin_panel/dashboard/templates/admin/base_site.html -->
+
+{% extends "admin/base_site.html" %}
+
+{% block extrahead %}
+    {{ block.super }}
+    <!-- Дополнительные стили или скрипты можно добавить здесь -->
+{% endblock %}
+
+{% block header %}
+    {{ block.super }}
+    <!-- Добавляем кнопку "Статистика" рядом с заголовком -->
+    <div style="float: right; margin-top: 10px;">
+        <a href="{% url 'admin:statistics' %}" class="button">Статистика</a>
+    </div>
+{% endblock %}
